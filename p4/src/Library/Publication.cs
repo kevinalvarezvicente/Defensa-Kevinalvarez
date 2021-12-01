@@ -29,6 +29,7 @@ namespace Ucu.Poo.Defense
 
                 return result;
             }
+            set{}
         }
 
         private IList<PublicationItem> items = new List<PublicationItem>();
@@ -43,6 +44,12 @@ namespace Ucu.Poo.Defense
             PublicationItem item = new PublicationItem(material, quantity, price);
             this.items.Add(item);
             return item;
+        }
+
+        public Publication AddDiscount(double amount)
+        {
+            this.Total = this.Total - amount;
+            return this;
         }
 
         public void RemoveItem(PublicationItem item)

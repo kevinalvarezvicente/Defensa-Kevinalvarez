@@ -7,6 +7,7 @@ namespace Ucu.Poo.Defense
     public interface IPublicationItem
     {
         public double Total { get;  }
+        public void RemoveItem(){}
     }
 
 }
