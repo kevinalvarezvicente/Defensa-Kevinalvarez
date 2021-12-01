@@ -2,11 +2,11 @@ using System;
 
 namespace Ucu.Poo.Defense
 {
-    public class PublicationDiscount
+    public class PublicationDiscount: IPublicationItem
     {
         private int amount;
 
-        public int SubTotal
+        public double Total
         {
             get
             {
@@ -14,13 +14,13 @@ namespace Ucu.Poo.Defense
             }
             set
             {
-                this.amount = value;
+                this.amount = Convert.ToInt32(value);
             }
         }
 
         public PublicationDiscount(int amount)
         {
-            this.SubTotal = amount;
+            this.Total = amount;
         }
     }
 }

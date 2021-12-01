@@ -5,7 +5,7 @@ using System.Collections.ObjectModel;
 
 namespace Ucu.Poo.Defense
 {
-    public class Publication
+    public class Publication : IPublicationItem
     {
         public DateTime EndDate { get; set; }
 
@@ -22,9 +22,9 @@ namespace Ucu.Poo.Defense
             get
             {
                 double result = 0;
-                foreach (PublicationItem item in this.items)
+                foreach (IPublicationItem item in this.items)
                 {
-                    result = result + item.SubTotal;
+                    result = result + item.Total;
                 }
 
                 return result;

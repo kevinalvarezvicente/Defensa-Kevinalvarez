@@ -1,6 +1,6 @@
 namespace Ucu.Poo.Defense
 {
-    public class PublicationItem
+    public class PublicationItem : IPublicationItem
     {
         public Material Material { get; set; }
 
@@ -8,14 +8,13 @@ namespace Ucu.Poo.Defense
 
         public int Price { get; set; }
 
-        public int SubTotal
+        public double Total
         {
             get
             {
                 return this.Quantity * this.Price;
             }
         }
-
         public PublicationItem(Material material, int quantity, int price)
         {
             this.Material = material;
