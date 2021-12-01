@@ -6,7 +6,7 @@ namespace Ucu.Poo.Defense
 
         public MaterialType Type { get; set; }
 
-        public Material<T>(string name, MaterialType type)
+        public Material(string name, MaterialType type)
         {
             this.Name = name;
             this.Type = type;
@@ -33,7 +33,7 @@ namespace Ucu.Poo.Defense
             // Retornar True si el otro objeto tiene el mismo texto que este objeto; y False en caso contrario
             else
             {
-                return this.Type.Equals(((Material)obj).Type) &&
+                return this.Type.Equals((Material)obj).Type) &&
                     this.Name.Equals(((Material)obj).Name);
             }
         }
